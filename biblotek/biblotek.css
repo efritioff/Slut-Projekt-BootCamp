@@ -1,0 +1,53 @@
+/*
+ * @Author: MoS 
+ * @Date: 2025-10-03 11:52:33 
+ * @Last Modified by: MoS
+ * @Last Modified time: 2025-10-03 12:35:06
+ */
+
+ * {
+    /* border: 1px red solid; */
+ }
+
+.slide2main {
+    margin-top: -60px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: margin-top 0.3s;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+}
+.slide2main:focus {
+    margin-top: 0px;
+}
+
+#searchBardDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search {
+    height: 40px;
+    width: 600px;
+    border: 1px solid #999;
+    border-radius: 20px;
+    font-size: 2em;
+    padding: 0.7em;
+    margin: 0.5em;
+    box-shadow: 3px 3px 5px #999;
+    color: #111;
+}
+
+#startTheSearch {
+    height: 50px;
+    width: 120px;
+    font-size: 1.8em;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #999;
+    border: 1px solid #999;
+}

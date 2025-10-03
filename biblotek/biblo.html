@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="biblotek.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Synkas med index.html -->
+    <a id="slide2main" class="slide2main" href="#main">Gå till huvudtext</a>
+
+    <main id="main">
+      <h1>Vilken bok vill du låna!</h1>
+      <div id="searchBardDiv">
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Skriv här vilka böcker söker du efter?"
+        />
+        <button id="startTheSearch">sök</button>
+      </div>
+
+      <div id="booksResults"></div>
+    </main>
+
+    <script src="biblotek.js"></script>
+    <!-- Synkas med index.html -->
+  </body>
+</html>
