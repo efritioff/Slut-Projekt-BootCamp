@@ -10,6 +10,19 @@
  }
 
  body {
+    display: flex;
+    justify-content: center;
+    background-color: #eee;
+ }
+
+ #main {
 
  }
- 
+
+ #main {
+
+ }
+
+ #footer {
+    height: 150px;
+ }
