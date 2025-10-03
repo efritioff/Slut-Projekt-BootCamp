@@ -2,7 +2,7 @@
  * @Author: MoS 
  * @Date: 2025-10-03 11:52:33 
  * @Last Modified by: MoS
- * @Last Modified time: 2025-10-03 12:35:06
+ * @Last Modified time: 2025-10-03 15:07:01
  */
 
  * {
@@ -40,6 +40,10 @@
     margin: 0.5em;
     box-shadow: 3px 3px 5px #999;
     color: #111;
+    transition: 0.4s;
+}
+#search:hover {
+    transform: scale(1.01);
 }
 
 #startTheSearch {
@@ -50,4 +54,9 @@
     border-radius: 50%;
     box-shadow: 3px 3px 5px #999;
     border: 1px solid #999;
+    transition: 0.4s;
+}
+
+#startTheSearch:hover {
+    transform: scale(1.1);
 }
