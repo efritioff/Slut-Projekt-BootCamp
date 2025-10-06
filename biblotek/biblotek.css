@@ -2,7 +2,7 @@
  * @Author: MoS 
  * @Date: 2025-10-03 11:52:33 
  * @Last Modified by: MoS
- * @Last Modified time: 2025-10-03 15:07:01
+ * @Last Modified time: 2025-10-06 08:08:16
  */
 
  * {
@@ -60,3 +60,35 @@
 #startTheSearch:hover {
     transform: scale(1.1);
 }
+
+#booksResults {
+ display: flex;
+ justify-content: start;
+ flex-wrap: wrap;
+}
+
+/* 
+CSS för object som skapas i biblotek.JS
+==============================
+ */
+
+ .bookHolder {
+    background-color: #efefef;
+    border: 1px solid #999;
+    margin: 25px;
+    padding: 25px;
+    box-shadow: 3px 3px 5px #999;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 250px;
+ }
+ .bookImg {
+    margin: 10px;
+ }
+ .bookTitle {
+    font-weight: 1.1em;
+    font-weight: bold;
+    margin: 0px 10px 10px;
+ }
