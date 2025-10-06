@@ -2,7 +2,7 @@
  * @Author: MoS 
  * @Date: 2025-10-03 11:06:57 
  * @Last Modified by: MoS
- * @Last Modified time: 2025-10-06 08:06:12
+ * @Last Modified time: 2025-10-06 08:10:17
  */
 
 const apikey = "AIzaSyDBIO4OfNn2JsHWIklCuiLqCHVLre-jOck"
@@ -16,7 +16,7 @@ if(searchInput === ""){
 }
 
 async function GoogleBooksAPI () {
-    const getGoogleBooksAPI = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInput}&maxResults=5&startIndex=10`)
+    const getGoogleBooksAPI = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInput}&maxResults=10&startIndex=20`)
     const GoogleBooksData = await getGoogleBooksAPI.json()
  
     //Testar att printa namnet på första Item
