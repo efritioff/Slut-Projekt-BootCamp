@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="/css/cssreset.css" rel="stylesheet" type="text/css" />
+
+    <!-- Synkas med member.html -->
+    <link href="member.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Synkas med index.html -->
+
+    <a id="slide2main" class="slide2main" href="#main">Gå till huvudtext</a>
+
+    <div class="overlay"></div>
+    <section id="popup">
+        <div id="popupHolder">
+            <h3 id="popupHeader">Välkommen som medlem</h3>
+            <div id="popupReturn"></div>
+      </div>
+    </section>
+
+    <main id="main">
+      <div id="loginMemberHolder">
+        <h3 id="loginMemberHeader">Bli medlem</h3>
+        <div id="formHolder">
+          <form action="welcome.html" method="post" id="membersReg">
+            <p class="requiredText">
+              <span class="required">*</span> = Obligatorisk <br /><br /><br />
+            </p>
+            <label for="fornamn" class="labelText"
+              >Förnamn <span class="required">*</span></label
+            >
+            <input
+              name="forname"
+              type="text"
+              id="fornamn"
+              class="inputField"
+              required
+            />
+            <label for="efternamn" class="labelText"
+              >Efternamn <span class="required">*</span></label
+            >
+            <input
+              name="efternamn"
+              type="text"
+              id="efternamn"
+              class="inputField"
+              required
+            />
+            <label for="losen" class="labelText"
+              >Önskad lösenord <span class="required">*</span></label
+            >
+            <input
+              name="losen"
+              type="password"
+              id="losen"
+              class="inputField"
+              required
+            />
+            <label for="email" class="labelText"
+              >E-post <span class="required">*</span></label
+            >
+            <input
+              name="email"
+              type="email"
+              id="email"
+              class="inputField"
+              required
+            />
+
+            <button name="submit" id="submit" class="medlemBtn">
+              Bli medlem
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="members.js"></script>
+    <!-- Synkas med index.html -->
+  </body>
+</html>

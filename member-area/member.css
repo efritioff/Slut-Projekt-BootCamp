@@ -1,0 +1,122 @@
+/*
+ * @Author: MoS 
+ * @Date: 2025-10-06 14:58:18 
+ * @Last Modified by: MoS
+ * @Last Modified time: 2025-10-07 09:37:53
+ */
+
+ 
+/*  ====================================
+Raderas vid en merge till annan sida
+ */
+
+ 
+/* 
+* {
+     border: 1px red solid; 
+ } */
+
+.slide2main {
+    margin-top: -60px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: margin-top 0.3s;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+}
+.slide2main:focus {
+    margin-top: 0px;
+}
+
+/*  ====================================
+^
+¶
+Raderas vid en merge till annan sida
+ */
+#loginMemberHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#formHolder {
+    border: 1px solid #999;
+    width: 200px;
+    padding: 80px;
+}
+
+ #loginMemberHeader {
+    margin: 2em auto;
+    font-size: 2em;
+ }
+.labelText {
+    color: #777;
+    margin: 5px 5px;
+    font-size: 1.2em;
+}
+.inputField{
+    height: 30px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid #777;
+    background-color: #fff;
+    padding: 5px 15px;
+}
+.inputField:hover {
+    border: 1px solid #900;
+    cursor: pointer;
+}
+ #membersReg {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+ }
+ .medlemBtn {
+    background-color: #900;
+    color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 8px;
+ }.medlemBtn:hover {
+    background-color: rgb(130, 1, 1);
+    cursor: pointer;
+ }
+ .required{
+    color: #900;
+    font-weight: bold;
+ }
+ .requiredText {
+    color: #999;
+ }
+
+ .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    background-color: #42424250;
+    display: ;
+ }
+ #popup {
+    display: ;
+    left: 30%;
+    top: 30%;
+    position: absolute;
+ }
+ #popupHolder {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 99;
+ }
