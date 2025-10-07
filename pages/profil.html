@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/cssreset.css">
     <link rel="stylesheet" href="/css/profil.css">
+      <link rel="stylesheet" href="/css/biblotek.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -36,9 +37,32 @@
     <main>
 
 <div class="login-center">
-  <div class="container">
     <div class="form-box" id="formBox">
       <h1>Profil</h1>
+      <section id="userInfoSection">
+        <h2>Dina uppgifter</h2>
+        <div id="userInfo">
+          <p class="display-text"><strong>Namn:</strong> <span id="userName">Per Hall</span></p>
+          <p class="display-text"><strong>E-post:</strong> <span id="userEmail"></span></p>
+      </section>
+      <section id="biblotekskort">
+            <div class="biblotekskort">
+      <div class="top-row">
+        <div class="card-number">9606 3663 0377 4090</div
+
+      <div class="chip"><img src="/img/chip.png" alt="chip"></div>
+
+      <div class="owner">
+        <div class="label">Ägare</div>
+        <div class="name">Per Hall</div>
+      </div>
+      </section>
+      
+      <!-- Ditt bibliotek: reserverade böcker (flyttat hit) -->
+      <section id="myLibrary">
+        <h2>Ditt bibliotek</h2>
+        <div id="myLibraryList"></div>
+      </section>
     </div>
   </div>
     </div>
@@ -54,10 +78,11 @@
         <li><a href="#">Fika</a></li>
         <li><a href="#">Bröd</a></li>
       </ul>
-      <p>Made with ❤️ by Moises & Elias</p>
+      <p>Made with ❤️ by Elias & Moises</p>
     </footer>
 
     <script src="/js/utlåning.js" defer></script>
     <script src="/js/mobile.js" defer></script>
+    <script src="/js/biblotek.js" defer></script>
   </body>
 </html>

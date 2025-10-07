@@ -1,8 +1,8 @@
 /*
  * @Author: MoS 
  * @Date: 2025-10-03 11:52:33 
- * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2025-10-06 14:45:16
+ * @Last Modified by: elias.fritioff
+ * @Last Modified time: 2025-10-07 12:58:24
  */
 
 /*  * {
@@ -86,6 +86,17 @@ CSS för object som skapas i biblotek.JS
     gap: 10px;
     width: 275px;
  }
+.book-btn, .cancel-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.book-btn { background: #a90028; color: #fff; }
+.book-btn:disabled { background: #b3b3b3; cursor: default; }
+.cancel-btn { background: #a90028; color: #fff; }
+.cancel-btn:hover { background: #7d001d }
  .bookImg {
     margin: 10px;
     max-height: 150px;
@@ -116,3 +127,22 @@ CSS för object som skapas i biblotek.JS
     justify-content: center;
     margin: 10px;
 }
+
+/* Horizontal scroll for reserved books in profile */
+#myLibraryList {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+#myLibraryList .bookHolder {
+    scroll-snap-align: start;
+    margin: 0;
+}
+
+/* Simple scrollbar styling (WebKit) */
+#myLibraryList::-webkit-scrollbar { height: 10px; }
+#myLibraryList::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 10px; }
