@@ -2,7 +2,7 @@
  * @Author: MoS 
  * @Date: 2025-10-06 14:58:18 
  * @Last Modified by: MoS
- * @Last Modified time: 2025-10-06 16:16:42
+ * @Last Modified time: 2025-10-07 08:18:12
  */
 
  
@@ -39,9 +39,15 @@ Raderas vid en merge till annan sida
 #loginMemberHolder{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    min-height: 80vh;
 }
+#formHolder {
+    border: 1px solid #999;
+    width: 200px;
+    padding: 80px;
+}
+
  #loginMemberHeader {
     margin: 2em auto;
     font-size: 2em;
@@ -65,8 +71,8 @@ Raderas vid en merge till annan sida
 }
  #membersReg {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     flex-direction: column;
  }
  .medlemBtn {
@@ -78,4 +84,21 @@ Raderas vid en merge till annan sida
  }.medlemBtn:hover {
     background-color: rgb(130, 1, 1);
     cursor: pointer;
+ }
+ .required{
+    color: #900;
+    font-weight: bold;
+ }
+ .requiredText {
+    color: #999;
+ }
+
+ .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    background-color: #42424250;
  }
