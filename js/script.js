@@ -46,7 +46,7 @@ if (searchInput && searchBtn && booksResults && searchResult) {
 
 async function GoogleBooksAPI () {
     const query2google = searchInput.value.trim()
-    const getGoogleBooksAPI = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query2google)}&maxResults=30&startIndex=30`)
+    const getGoogleBooksAPI = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(query2google)}&maxResults=10&startIndex=30`)
     const GoogleBooksData = await getGoogleBooksAPI.json()
  
     if(searchResult === ""){
