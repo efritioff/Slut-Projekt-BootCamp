@@ -2,74 +2,96 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Var kommer denna ifrån? -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="Description"
-      content="Denna sida är ett skolarbete gjord av Elias och Moises. För kursen BootCamp FOS25"
-    />
+    <meta name="Description" content="Denna sida är ett skolarbete gjord av Elias och Moises. För kursen BootCamp FOS25" />
 
     <!-- CSS (reset + projektstil) -->
-    <link rel="stylesheet" href="/css/cssreset.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-
-    <!-- Google Fonts (samma som i ditt exempel) -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cssreset.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>Project Elmo | By: Elias & Moises - BootCamp FOS 2025</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
   </head>
 
   <body>
-    <header>
-      <a class="logo" href="/">
-        <img src="img/favicon.ico" alt="logo" />
-      </a>
-      <nav>
-        <ul class="nav__links">
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
-      <a class="cta" href="#">Contact</a>
-      <p class="menu cta">Menu</p>
-    </header>
 
-    <div class="overlay">
-      <a class="close">&times;</a>
-      <div class="overlay__content">
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
-        <a href="#">About</a>
+     <a id="slide2main" class="slide2main" href="#main">Gå till huvudtext</a>
+  
+    <header>
+    <div id="logoHolder">
+      <a class="logo" href="/">
+        <img src="img/Elmo-png-1.webp" alt="Elmo project logotype"  />
+      </a>
+      <div id="logoTextContainer">
+        <h1 id="logoText">Elmo Project</h1>
+        <h2 id="motto">The public library</h2>
       </div>
     </div>
+      <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlayContent">
+          <a href="#">Services</a>
+          <a href="#">Projects</a>
+          <a href="#">Min sida</a>
+        </div>
+      </div>
+    </header>
+    
 
+    <section id="searchSection">
+        
+      <div id="searchBardDiv">
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Sök boken du vill låna"
+        />
+        <button id="startTheSearch">sök</button>
+      </div>
+
+      <div id="searchResult">
+        
+      </div>
+      <div id="booksResults">
+        
+      </div>
+    </section>
+    <section id="hero">
+      <!-- <img src="img/hero-banner.jpg" alt="Hero banner"> -->
+      <h1 id="startRubrik">Välkommen till Elmo projekt</h1>
+    </section>
     <main id="main">
-      <h1 id="startRubrik">Välkommen till Elmo-projekt</h1>
+      <div class="box">
+        <img src="img/box-img1.png" alt="box img 1" />
+        <h3 class="boxHeader">Lorem ipsum dolor sit amet</h3>
+        <p class="boxText">Proin
+        gravida sollicitudin ex, vel egestas velit auctor vitae. Vivamus at elit
+        sed elit tempus tincidunt. Aliquam id dignissim ligula. 
+        </p>
+      </div>
 
-      <p id="StartText">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+      <div class="box">
+        <img src="img/box-img2.png" alt="box img 2" />
+        <h3 class="boxHeader">Mauris
+        pretium magna</h3>
+        <p class="boxText">Vestibulum
         turpis ligula, pretium id consectetur in, scelerisque nec erat. Mauris
         pretium magna a ex pharetra accumsan. Duis sem magna, ultricies a
-        hendrerit eu, molestie eget dui. Morbi vel venenatis metus. Proin
-        gravida sollicitudin ex, vel egestas velit auctor vitae. Vivamus at elit
-        sed elit tempus tincidunt. Aliquam id dignissim ligula. Pellentesque
-        sagittis placerat augue, suscipit egestas lorem dignissim nec.
-        Suspendisse id augue eget erat maximus imperdiet a a nisl. Phasellus
-        mattis diam eu volutpat maximus. Suspendisse vitae nunc ligula. Vivamus
-        tellus nisi, sagittis egestas est ac, posuere finibus velit. Cras cursus
-        diam ut risus rutrum suscipit. Praesent lobortis elit quis rhoncus
-        consectetur. Nullam vitae ornare orci. Nulla convallis massa mollis
-        feugiat maximus. Donec ultrices gravida est, eget tristique libero
-        finibus eget.
-      </p>
+        hendrerit eu, molestie eget dui. Morbi vel venenatis metus.
+        </p>
+      </div>
     </main>
 
     <footer id="footer">
       <p id="copyright">Projekt Elmo | copyright 2025</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
