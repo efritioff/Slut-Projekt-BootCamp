@@ -1,0 +1,118 @@
+/*
+ * @Author: MoS 
+ * @Date: 2025-10-03 11:52:33 
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2025-10-06 14:45:16
+ */
+
+/*  * {
+     border: 1px red solid; 
+ } */
+
+.slide2main {
+    margin-top: -60px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: margin-top 0.3s;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+}
+.slide2main:focus {
+    margin-top: 0px;
+}
+
+#searchBardDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search {
+    height: 40px;
+    width: 600px;
+    border: 1px solid #999;
+    border-radius: 20px;
+    font-size: 2em;
+    padding: 0.7em;
+    margin: 0.5em;
+    box-shadow: 3px 3px 5px #999;
+    color: #111;
+    transition: 0.4s;
+}
+#search:hover {
+    transform: scale(1.01);
+}
+
+#startTheSearch {
+    height: 50px;
+    width: 120px;
+    font-size: 1.8em;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #999;
+    border: 1px solid #999;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#startTheSearch:hover {
+    transform: scale(1.1);
+}
+
+#booksResults {
+ display: flex;
+ justify-content: start;
+ flex-wrap: wrap;
+}
+
+/* 
+CSS för object som skapas i biblotek.JS
+==============================
+ */
+
+ .bookHolder {
+    background-color: #efefef;
+    border: 1px solid #999;
+    margin: 25px;
+    padding: 25px;
+    box-shadow: 3px 3px 5px #999;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 275px;
+ }
+ .bookImg {
+    margin: 10px;
+    max-height: 150px;
+ }
+ .bookTitle {
+    font-weight: 1.1em;
+    font-weight: bold;
+    margin: 0px 10px 5px;
+    width: 90%;
+ }
+ .bookDesc{
+    font-size: 0.6em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 90%;
+    height: 100px;
+ }
+ .bookPublish {
+    font-size: 0.6em;
+    font-weight: bold;
+    color: #999;width: 90%;
+    margin: 0px;
+ }
+.searchText {
+    font-size: 0.6em;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
