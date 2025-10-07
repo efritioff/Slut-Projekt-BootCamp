@@ -2,7 +2,7 @@
  * @Author: MoS 
  * @Date: 2025-10-06 14:58:18 
  * @Last Modified by: MoS
- * @Last Modified time: 2025-10-07 08:18:12
+ * @Last Modified time: 2025-10-07 09:37:53
  */
 
  
@@ -101,4 +101,22 @@ Raderas vid en merge till annan sida
     height: 100%;
     width: 100%;
     background-color: #42424250;
+    display: ;
+ }
+ #popup {
+    display: ;
+    left: 30%;
+    top: 30%;
+    position: absolute;
+ }
+ #popupHolder {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 99;
  }
