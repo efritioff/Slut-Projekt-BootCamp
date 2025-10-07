@@ -16,7 +16,6 @@
     <title>Project Elmo | By: Elias & Moises - BootCamp FOS 2025</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 
-
   </head>
 
   <body>
@@ -28,7 +27,10 @@
       <a class="logo" href="/">
         <img src="img/Elmo-png-1.webp" alt="Elmo project logotype"  />
       </a>
-      <h1 id="logoText">Elmo Project</h1>
+      <div id="logoTextContainer">
+        <h1 id="logoText">Elmo Project</h1>
+        <h2 id="motto">The public library</h2>
+      </div>
     </div>
       <div class="overlay">
         <a class="close">&times;</a>
@@ -39,13 +41,30 @@
         </div>
       </div>
     </header>
-      
-    <section id="hero">
-      <h1 id="startRubrik">Välkommen till Elmo projekt</h1>
-      <img src="img/hero-banner.jpg" alt="Hero banner">
-    </section>
-    <section id="search">
+    
 
+    <section id="searchSection">
+        
+      <div id="searchBardDiv">
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Sök boken du vill låna"
+        />
+        <button id="startTheSearch">sök</button>
+      </div>
+
+      <div id="searchResult">
+        
+      </div>
+      <div id="booksResults">
+        
+      </div>
+    </section>
+    <section id="hero">
+      <!-- <img src="img/hero-banner.jpg" alt="Hero banner"> -->
+      <h1 id="startRubrik">Välkommen till Elmo projekt</h1>
     </section>
     <main id="main">
       <div class="box">
@@ -73,6 +92,6 @@
       <p id="copyright">Projekt Elmo | copyright 2025</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
