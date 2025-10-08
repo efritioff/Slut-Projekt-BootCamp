@@ -28,20 +28,13 @@
     <div class="form-box" id="formBox">
       <h1 id="formTitle">Logga in</h1>
 
+      <!-- Enkel sida med EN hårdkodad inloggning -->
       <form id="loginForm">
-        <input type="email" placeholder="E-post" required>
-        <input type="password" placeholder="Lösenord" required>
+        <input id="loginEmail" type="email" placeholder="E-post" required>
+        <input id="loginPassword" type="password" placeholder="Lösenord" required>
         <button type="submit">Logga in</button>
-        <p>Har du inget konto? <a href="#" id="registerLink">Registrera</a></p>
       </form>
-
-      <form id="registerForm" style="display:none;">
-        <input type="text" placeholder="Användarnamn" required>
-        <input type="email" placeholder="E-post" required>
-        <input type="password" placeholder="Lösenord" required>
-        <button type="submit">Registrera</button>
-        <p>Har du redan ett konto? <a href="#" id="loginLink">Logga in</a></p>
-      </form>
+      <p style="font-size:0.9rem;color:#666;margin-top:8px">Testinloggning: <strong>admin@gmail.com</strong> / <strong>123456</strong></p>
     </div>
   </div>
 

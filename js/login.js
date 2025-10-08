@@ -1,19 +1,30 @@
-console.log("Login.js loaded");
+console.log("Login.js loaded (hardcoded-login)");
 
-const loginForm = document.getElementById('loginForm');
-const registerForm = document.getElementById('registerForm');
-const registerLink = document.getElementById('registerLink');
-const loginLink = document.getElementById('loginLink');
-const formTitle = document.getElementById('formTitle');
+// Hårdkodad inloggning
+const HARDCODED_USER = {
+  email: 'admin@gmail.com',
+  password: '123456',
+  username: 'Admin'
+};
 
-registerLink.addEventListener('click', () => {
-  loginForm.style.display = 'none';
-  registerForm.style.display = 'block';
-  formTitle.textContent = 'Registrera';
+document.addEventListener('DOMContentLoaded', () => {
+  const loginForm = document.getElementById('loginForm');
+  if (!loginForm) return;
+
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+    const password = document.getElementById('loginPassword').value;
+
+    if (email === HARDCODED_USER.email && password === HARDCODED_USER.password) {
+      // markera inloggad
+      localStorage.setItem('loggedInUserEmail', HARDCODED_USER.email);
+      localStorage.setItem('loggedInUsername', HARDCODED_USER.username);
+      // redirectera till profil (samma som tidigare projekt)
+      window.location.href = '/pages/profil.html';
+    } else {
+      alert('Fel e-post eller lösenord.');
+    }
+  });
 });
-
-loginLink.addEventListener('click', () => {
-  loginForm.style.display = 'block';
-  registerForm.style.display = 'none';
-  formTitle.textContent = 'Logga in';
-});
+  const registerLink = document.getElementById("registerLink");
