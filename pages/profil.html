@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/cssreset.css">
     <link rel="stylesheet" href="../css/profil.css">
-      <link rel="stylesheet" href="../css/biblotek.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+
     <script>
       // Redirect till login om inte inloggad
       const _loggedInEmail = localStorage.getItem('loggedInUserEmail');
@@ -31,18 +30,25 @@
     </script>
   </head>
   <body>
-    <header>
-      <img id="logo" src="/img/Elmo-png-1.webp" alt="Elmos logotyp">
-      <nav>
-        <ul class="nav__links">
-          <li><a href="../index.html">Låna Böcker</a></li>
-          <li><a href="#">Favorit Böcker</a></li>
-          <li><a href="#">Bok Reviews</a></li>
-        </ul>
-      </nav>
-      <a class="cta" href="#">Profil</a>
-      <p class="menu cta">Menu</p>
-    </header>
+<header>
+  <div id="logoHolder">
+    <a class="logo" href="/">
+      <img src="../img/Elmo-png-1.webp" alt="Elmo project logotype">
+    </a>
+    <div id="logoTextContainer">
+      <h1 id="logoText">Elmo Project</h1>
+      <h2 id="motto">The public library</h2>
+    </div>
+  </div>
+
+  <nav id="menu" aria-label="Huvudmeny">
+    <ul>
+      <li class="menuItem"><a href="/">Start</a></li>
+      <li class="menuItem"><a href="profil.html">Min sida</a></li>
+      <li class="menuItem"><a href="../pages/omoss.html">Om oss</a></li>
+    </ul>
+  </nav>
+</header>
 
     <div class="overlay">
       <a class="close">&times;</a>
@@ -57,19 +63,22 @@
 
 <div class="login-center">
     <div class="form-box" id="formBox">
-      <h1>Profil</h1>
+      <p id="profil-text">Profil</p>
       <section id="userInfoSection">
-        <h2>Dina uppgifter</h2>
+        <p id="uppgifter-text">Dina uppgifter</p>
         <div id="userInfo">
           <p class="display-text"><strong>Namn:</strong> <span id="userName">Per Hall</span></p>
           <p class="display-text"><strong>E-post:</strong> <span id="userEmail"></span></p>
+          </div>
       </section>
       <section id="biblotekskort">
             <div class="biblotekskort">
       <div class="top-row">
-        <div class="card-number">9606 3663 0377 4090</div
+        <div class="card-number">9606 3663 0377 4090</div>
 
-      <div class="chip"><img src="/img/chip.png" alt="chip"></div>
+      <div class="chip">
+        <img src="/img/chip.png" alt="chip">
+      </div>
 
       <div class="owner">
         <div class="label">Ägare</div>
@@ -79,18 +88,18 @@
       
       <!-- Ditt bibliotek: reserverade böcker (flyttat hit) -->
       <section id="myLibrary">
-        <h2>Ditt bibliotek</h2>
+        <p id="biblotek-text">Ditt bibliotek</p>
         <div id="myLibraryList"></div>
       </section>
-    </div>
-  </div>
-    </div>
+
+
   </div>
 </div>
     </main>
+    <footer id="footer">
+      <p id="copyright">Projekt Elmo | copyright 2025</p>
+    </footer>
 
-    <script src="/js/utlåning.js" defer></script>
-    <script src="/js/mobile.js" defer></script>
-    <script src="/js/biblotek.js" defer></script>
+    <script src="../js/biblotek.js" defer></script>
   </body>
 </html>

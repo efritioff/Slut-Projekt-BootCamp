@@ -1,251 +1,272 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* Header & Footer */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    background-color: #1e1e22;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  width: 100%;
 }
 
-footer {
+ #footer {
+    height: 150px;
+    width: 100%;
+    background-color: #333;
     display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     justify-content: center;
     align-items: center;
-    padding: 15px 5%;
-    background-color: #1e1e22;
-    box-sizing: border-box;
+ }
+
+ #copyright {
+   color: #fff;
+ }
+
+/* Logo + Header content */
+#logoHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
 }
+
+.logo img {
+  width: 100px;
+  margin: 2em;
+  max-width: none; /* override global img rule */
+}
+
+#logoText {
+  font-size: 1.8em;
+  text-decoration: none;
+  color: #111;
+}
+
+#motto {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid red;
+}
+
+/* Menu */
+#menu {
+  height: 100%;
+  margin: 2em;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  display: inline;
+  margin: 1em;
+  cursor: pointer;
+}
+
+.menuItem a {
+  color: #333;
+  font-size: 1.5em;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 10px 0 10px 0;
+  box-shadow: 5px 5px 5px #aaa;
+  padding: 1em;
+}
+
+/* Mobil & små skärmar */
+@media (max-width: 800px) {
+  #menu ul {
+    display: flex;
+    flex-wrap: wrap;     /* radbryt knapparna */
+    gap: 12px;           /* avstånd mellan knapparna */
+    padding: 0;
+    margin: 0;
+  }
+
+  .menuItem {
+    display: block;      /* inte inline i mobil */
+    margin: 0;           /* vi använder gap i stället */
+  }
+
+  .menuItem a {
+    display: inline-block;
+    font-size: 1.05em;   /* lite mindre */
+    padding: .6em .9em;  /* mindre vertikal padding */
+    line-height: 1.2;    /* undvik överlapp */
+    box-shadow: 3px 3px 6px #bbb;
+  }
+}
+
+/* Extra litet: stapla på en kolumn */
+@media (max-width: 480px) {
+  #menu ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .menuItem a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 
 img {
-    max-width: 2rem;
+  max-width: 100%;
+  height: auto;
 }
 
-#osynlig {
-    display: none;
-    opacity: 0;
-}
-
-#logo {
-    max-width: 2rem;
-}
+#logo { max-width: 2rem; }
 
 #chip {
-    position: relative;
-    top: 40%;
-    left: 1em;
-    width: 3rem;
-    max-width: 3rem;
+  position: relative;
+  top: 40%;
+  left: 1em;
+  width: 3rem;
+  max-width: 3rem;
 }
 
-#osynlig {
-    display: none;
-    opacity: 0;
-}
-
-#logo {
-    max-width: 2rem;
-}
-
-#chip {
-    position: relative;
-    top: 40%;
-    left: 1em;
-    width: 3rem;
-    max-width: 3rem;
-}
-
-p {
-    font-family: Helvetica;
-    font-weight: 500;
-    color: #edf0f1;
-    text-decoration: none;
-    padding: 15px 5%;
-}
-
-.nav__links a,
-.cta,
-.overlay__content a {
-    font-family: Helvetica;
-    font-weight: 500;
-    color: #edf0f1;
-    text-decoration: none;
-}
-
-
-
-#myLibraryList {
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
+/* Nav links (if used elsewhere) */
 .nav__links {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
-.nav__links li {
-    padding: 0px 12px;
-}
-
-.nav__links li a {
-    transition: color 0.3s ease 0s;
-}
-
-.nav__links li a:hover {
-    color: #a90028;
-}
+.nav__links li { padding: 0 12px; }
+.nav__links li a { transition: color 0.3s ease; }
+.nav__links li a:hover { color: #a90028; }
 
 .cta {
-    padding: 6px 16px;
-    background-color: #a90028;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease 0s;
+  padding: 6px 16px;
+  background-color: #a90028;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+.cta:hover { background-color: #7d001d; }
 
-.cta:hover {
-    background-color: #7d001d;
-}
-
-/* Mobile Nav */
-
-.menu {
-    display: none;
-}
+/* Mobile Nav overlay */
+.menu { display: none; }
 
 .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    background-color: #24252a;
-    overflow-x: hidden;
-    transition: width 0.5s ease 0s;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease;
 }
-
-.overlay--active {
-    width: 100%;
-}
+.overlay--active { width: 100%; }
 
 .overlay__content {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 .overlay a {
-    padding: 10px;
-    font-size: 36px;
-    display: block;
-    transition: color 0.3s ease 0s;
+  padding: 10px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease;
 }
-
 .overlay a:hover,
-.overlay a:focus {
-    color: #7d001d;
-}
+.overlay a:focus { color: #7d001d; }
+
 .overlay .close {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    color: #edf0f1;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
 }
 
 @media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px;
-    }
-    .overlay .close {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
+  .overlay a { font-size: 20px; }
+  .overlay .close { font-size: 40px; top: 15px; right: 35px; }
 }
 
 @media only screen and (max-width: 800px) {
-    .nav__links,
-    .cta {
-        display: none;
-    }
-    .menu {
-        display: initial;
-    }
+  .nav__links, .cta { display: none; }
+  .menu { display: initial; }
 }
 
-/* Centering only for the login page wrapper to keep header at the top */
+/* Center wrapper on login/profile pages */
 .login-center {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Optional card/container */
 .body {
-    background: white;
-    border-radius: 20px;
-    padding: 40px;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+h1 { text-align: center; margin-bottom: 20px; }
 
-/* Form controls removed (not used on this page) */
-
-p {
-    text-align: center;
-    margin-top: 10px;
-}
+p { text-align: center; margin-top: 10px; }
 
 .display-text {
     color: black;
 }
 
-.display-text {
-    color: black;
+#text-display{
+    padding-bottom: 1rem;
 }
 
 a {
-    color: #a90028;
-    text-decoration: none;
-    font-weight: bold;
+  color: #a90028;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* My Library (reserved books) */
+#myLibraryList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+#profil-text {
+    padding-inline: 3rem;
+    font-size: 3rem;
+}
+
+#biblotek-text {
+    padding-inline: 3rem;
+    font-size: 3rem;
 }
 
 #biblotekskort .biblotekskort {
-  width: min(340px, 90vw);
-  aspect-ratio: 85.6 / 53.98;
-  padding: 14px;
+  margin: 16px auto; /* centrerar block med känd bredd */
+}
+
+/* Library card */
 #biblotekskort .biblotekskort {
   width: min(340px, 90vw);
   aspect-ratio: 85.6 / 53.98;
   padding: 14px;
   border-radius: 8px;
-  box-shadow: 0 6px 18px #00000040;
-
-  color: #fff;
-  font-size: 500;
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
-
   color: #fff;
   font: 500 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, Inter, sans-serif;
   background: linear-gradient(248.4deg, #ff5959 0%, #930000 100%);
-
   display: grid;
   grid-template-columns: 1fr auto;
   grid-auto-rows: auto;
@@ -253,13 +274,6 @@ a {
   box-sizing: border-box;
 }
 
-/* Vi ignorerar .top-row och positionerar direkt via grid */
-#biblotekskort .card-number {
-  grid-column: 1;
-  grid-row: 1;
-  font-size: 1.05rem;
-  letter-spacing: 0.12rem;
-/* Vi ignorerar .top-row och positionerar direkt via grid */
 #biblotekskort .card-number {
   grid-column: 1;
   grid-row: 1;
@@ -267,9 +281,6 @@ a {
   letter-spacing: 0.12rem;
 }
 
-#biblotekskort .chip {
-  grid-column: 2;
-  grid-row: 1;
 #biblotekskort .chip {
   grid-column: 2;
   grid-row: 1;
@@ -277,12 +288,6 @@ a {
   height: 36px;
   align-self: center;
   justify-self: end;
-  align-self: center;
-  justify-self: end;
-}
-
-#biblotekskort .chip img {
-#biblotekskort .chip img {
 }
 
 #biblotekskort .chip img {
@@ -295,17 +300,6 @@ a {
   grid-column: 1 / -1;
   grid-row: 2;
   margin: 0;
-#biblotekskort .owner {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  margin: 0;
-  display: flex;
-  gap: .5rem;
-  gap: .5rem;
-  align-items: baseline;
-  justify-content: flex-end;
-  font-size: .78rem;
-  font-size: .78rem;
   display: flex;
   gap: .5rem;
   align-items: baseline;
@@ -315,14 +309,68 @@ a {
 
 #biblotekskort .owner .label { opacity: .9; font-size: .7rem; }
 #biblotekskort .owner .name  { font-weight: 600; }
-#biblotekskort .owner .label { opacity: .9; font-size: .7rem; }
-#biblotekskort .owner .name  { font-weight: 600; }
 
 @media (max-width: 420px) {
   #biblotekskort .biblotekskort { padding: 10px; }
   #biblotekskort .chip { width: 36px; height: 28px; }
   #biblotekskort .card-number { font-size: .95rem; }
-  #biblotekskort .biblotekskort { padding: 10px; }
-  #biblotekskort .chip { width: 36px; height: 28px; }
-  #biblotekskort .card-number { font-size: .95rem; }
+}
+
+.book-btn, .cancel-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cancel-btn { background: #a90028; color: #fff; }
+.cancel-btn:hover { background: #7d001d }
+
+/* Book cards */
+.bookHolder {
+  background-color: #efefef;
+  border: 1px solid #999;
+  margin: 25px;
+  padding: 25px;
+  box-shadow: 3px 3px 5px #eee;
+  border-radius: 0px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 275px;
+}
+
+
+.bookImg { margin: 10px; max-height: 150px; }
+
+.bookTitle {
+  font-weight: bold;
+  margin: 0 10px 5px;
+  width: 90%;
+}
+
+.bookDesc {
+  font-size: 0.6em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 90%;
+  height: 100px;
+}
+
+.bookPublish {
+  font-size: 0.6em;
+  font-weight: bold;
+  color: #999;
+  width: 90%;
+  margin: 0;
+}
+
+.searchText {
+  font-size: 0.6em;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
