@@ -27,6 +27,23 @@ img {
     max-width: 2rem;
 }
 
+#osynlig {
+    display: none;
+    opacity: 0;
+}
+
+#logo {
+    max-width: 2rem;
+}
+
+#chip {
+    position: relative;
+    top: 40%;
+    left: 1em;
+    width: 3rem;
+    max-width: 3rem;
+}
+
 p {
     font-family: Helvetica;
     font-weight: 500;
@@ -177,80 +194,73 @@ p {
     margin-top: 10px;
 }
 
+.display-text {
+    color: black;
+}
+
 a {
     color: #a90028;
     text-decoration: none;
     font-weight: bold;
 }
 
-.biblotekskort,
-.biblotekskort * {
+#biblotekskort .biblotekskort {
+  width: min(340px, 90vw);
+  aspect-ratio: 85.6 / 53.98;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+
+  color: #fff;
+  font: 500 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, Inter, sans-serif;
+  background: linear-gradient(248.4deg, #ff5959 0%, #930000 100%);
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-auto-rows: auto;
+  gap: 12px;
   box-sizing: border-box;
 }
 
-.biblotekskort {
-  width: 340px;
-  aspect-ratio: 85.6 / 53.98; /* original card ratio från figma export */
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: #fff;
-  background: linear-gradient(248.4deg, rgba(255,89,89,1) 0%, rgba(147,0,0,1) 100%);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 14px;
+/* Vi ignorerar .top-row och positionerar direkt via grid */
+#biblotekskort .card-number {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.05rem;
+  letter-spacing: 0.12rem;
 }
 
-.biblotekskort .top-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.biblotekskort .chip {
+#biblotekskort .chip {
+  grid-column: 2;
+  grid-row: 1;
   width: 48px;
   height: 36px;
+  align-self: center;
+  justify-self: end;
 }
 
-.display-text {
-    color: black;
-}
-
-.biblotekskort .chip img {
+#biblotekskort .chip img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.biblotekskort .card-number {
-  font-size: 1.05rem;
-  letter-spacing: 0.12rem;
-  font-weight: 500;
-}
-
-.biblotekskort .owner {
+#biblotekskort .owner {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 0;
   display: flex;
-  gap: 8px;
+  gap: .5rem;
   align-items: baseline;
   justify-content: flex-end;
-  font-size: 0.78rem;
+  font-size: .78rem;
 }
 
-.biblotekskort .owner .label {
-  opacity: 0.9;
-  font-size: 0.7rem;
-}
+#biblotekskort .owner .label { opacity: .9; font-size: .7rem; }
+#biblotekskort .owner .name  { font-weight: 600; }
 
-.biblotekskort .owner .name {
-  font-weight: 600;
-}
-
-/* Mobil = scalea ner kort */
 @media (max-width: 420px) {
-  .biblotekskort { width: 260px; padding: 10px; }
-  .biblotekskort .chip { width: 36px; height: 28px; }
-  .biblotekskort .card-number { font-size: 0.95rem; }
+  #biblotekskort .biblotekskort { padding: 10px; }
+  #biblotekskort .chip { width: 36px; height: 28px; }
+  #biblotekskort .card-number { font-size: .95rem; }
 }
