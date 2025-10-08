@@ -135,10 +135,10 @@ header {
 
 #search {
     height: 40px;
-    width: 300px;
+    width: 250px;
     border: 1px solid #999;
-    border-radius: 20px;
-    font-size: 1.3em;
+    border-radius: 10px;
+    font-size: 1.1em;
     padding: 0.7em;
     margin: 0.5em;
     box-shadow: 3px 3px 5px #999;
@@ -151,14 +151,15 @@ header {
 
 #startTheSearch {
     height: 50px;
-    width: 120px;
+    width: 100px;
     font-size: 1.8em;
     text-align: center;
-    border-radius: 50%;
-    box-shadow: 3px 3px 5px #999;
+    border-radius: 10px 0px 10px 0px;
+    box-shadow: 3px 3px 5px #eee;
     border: 1px solid #999;
     transition: 0.4s;
     cursor: pointer;
+    margin: 1em;
 }
 
 #startTheSearch:hover {
@@ -181,8 +182,8 @@ CSS för object som skapas i biblotek.JS
     border: 1px solid #999;
     margin: 25px;
     padding: 25px;
-    box-shadow: 3px 3px 5px #999;
-    border-radius: 20px;
+    box-shadow: 3px 3px 5px #eee;
+    border-radius: 0px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -249,3 +250,24 @@ CSS för object som skapas i biblotek.JS
 /* Simple scrollbar styling (WebKit) */
 #myLibraryList::-webkit-scrollbar { height: 10px; }
 #myLibraryList::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 10px; }
+
+#menu {
+   margin: 3% 3em;
+
+}
+
+.menuItem {
+   display: inline;
+   margin:  2em;
+   cursor: pointer;
+}
+.menuItem a {
+   color: #333;
+   font-size: 1.5em;
+   text-decoration: none;
+   margin: 1em;
+   background-color: #fff;
+   border-radius: 10px 0px 10px 0px;
+   box-shadow: 5px 5px 5px #aaa;
+   padding: 1.1em;
+}
