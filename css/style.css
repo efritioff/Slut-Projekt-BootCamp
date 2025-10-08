@@ -27,13 +27,15 @@
 .slide2main {
    margin-top: -60px;
    height: 40px;
-   position: absolute;
+   position: static;
    top: 0;
    left: 0;
    transition: margin-top 0.3s;
-   background-color: #333;
+   background-color: #333; 
    color: white;
    padding: 5px;
+   width: 100%;
+   text-align: center;
 }
 .slide2main:focus {
    margin-top: 0px;
@@ -42,13 +44,13 @@ header {
    display: flex;
    justify-content: space-between;
    background-color: #eee;
-   padding: 20px;
    width: 100%;
 }
 #logoHolder {
    display: flex;
    justify-content: center;
    align-items: center;
+   padding: 2em;
 }
 #logoText{
    font-size: 2em;
