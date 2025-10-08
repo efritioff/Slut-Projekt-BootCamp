@@ -188,10 +188,9 @@ a {
   box-sizing: border-box;
 }
 
-/* Credit-card like card with responsive sizing */
 .biblotekskort {
-  width: 340px; /* change as needed */
-  aspect-ratio: 85.6 / 53.98; /* preserve original card ratio */
+  width: 340px;
+  aspect-ratio: 85.6 / 53.98; /* original card ratio från figma export */
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -249,7 +248,7 @@ a {
   font-weight: 600;
 }
 
-/* Small screens: scale card down */
+/* Mobil = scalea ner kort */
 @media (max-width: 420px) {
   .biblotekskort { width: 260px; padding: 10px; }
   .biblotekskort .chip { width: 36px; height: 28px; }

@@ -10,13 +10,32 @@
     <link rel="stylesheet" href="/css/profil.css">
       <link rel="stylesheet" href="/css/biblotek.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <script>
+      // Redirect till login om inte inloggad
+      const _loggedInEmail = localStorage.getItem('loggedInUserEmail');
+      if (!_loggedInEmail) {
+        window.location.href = '/pages/login.html';
+      }
+
+      const _loggedInName = localStorage.getItem('loggedInUsername') || '';
+
+      window.addEventListener('DOMContentLoaded', () => {
+        const userEmailEl = document.getElementById('userEmail');
+        const userNameEl = document.getElementById('userName');
+        const ownerNameEls = document.querySelectorAll('.biblotekskort .owner .name');
+
+        if (userEmailEl) userEmailEl.textContent = _loggedInEmail || '';
+        if (userNameEl) userNameEl.textContent = _loggedInName || _loggedInEmail || '';
+        if (ownerNameEls.length) ownerNameEls.forEach(el => el.textContent = _loggedInName || '');
+      });
+    </script>
   </head>
   <body>
     <header>
       <img src="/img/Elmo-png-1.webp" alt="Elmos logotyp">
       <nav>
         <ul class="nav__links">
-          <li><a href="#">Låna Böcker</a></li>
+          <li><a href="/pages/biblo.html">Låna Böcker</a></li>
           <li><a href="#">Favorit Böcker</a></li>
           <li><a href="#">Bok Reviews</a></li>
         </ul>
