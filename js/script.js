@@ -5,10 +5,8 @@
  * @Last Modified time: 2025-10-03 10:22:34 
  */
 
-
 /* 
 Pasted från biblo.js 2025-10-07 14:06 */
-
 
 console.log("Project Elmo\n============")
 console.log("script.js loaded");
@@ -23,6 +21,22 @@ const myLibraryList = document.getElementById('myLibraryList')
 
 const hero = document.getElementById("hero")
 const main = document.getElementById("main")
+/* 
+Skipp Script Menu
+
+//Meny script. klistrat in från reservera.js 2025-10-08 09:09
+const menuOpen = doc.querySelector(".menu");
+const menuClose = doc.querySelector(".close");
+const overlay = doc.querySelector(".overlay");
+
+menuOpen.addEventListener("click", () => {
+  overlay.classList.add("overlay--active");
+});
+
+menuClose.addEventListener("click", () => {
+  overlay.classList.remove("overlay--active");
+});
+//Meny script. klistrat in från reservera.js 2025-10-08 09:09 */
 
 // Startar sökning (endast om sök-element finns på sidan)
 if (searchInput && searchBtn && booksResults && searchResult) {
