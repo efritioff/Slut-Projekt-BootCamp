@@ -48,7 +48,7 @@ if (searchInput && searchBtn && booksResults && searchResult) {
     // Startar sökning
     searchBtn.addEventListener("click", async() => {
         searchInput.value = searchInput.value
-        console.log("Klick")
+        console.log("Sök klickad")
 
         //Tömmer gamla resultat av böcker
         booksResults.innerHTML = ""
@@ -57,6 +57,17 @@ if (searchInput && searchBtn && booksResults && searchResult) {
         await GoogleBooksAPI()
     })
 }
+    // Tryck på Enter i input-fältet
+    searchInput.addEventListener("keydown", async (enterKey) => {
+    if (enterKey.key === "Enter") {
+        enterKey.preventDefault() 
+        console.log("Enter tryckt")
+
+        booksResults.innerHTML = ""
+        
+        await GoogleBooksAPI()
+    }
+    })
 
 async function GoogleBooksAPI () {
     const query2google = searchInput.value.trim()
