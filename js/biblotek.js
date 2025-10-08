@@ -2,7 +2,7 @@
  * @Author: MoS 
  * @Date: 2025-10-03 11:06:57 
  * @Last Modified by: elias.fritioff
- * @Last Modified time: 2025-10-07 10:46:08
+ * @Last Modified time: 2025-10-08 11:12:41
  */
 
 console.log("Project Elmo\n============")
@@ -84,6 +84,13 @@ async function GoogleBooksAPI () {
                 if (isBookReserved(bookId)) reserveBtn.disabled = true
 
                 reserveBtn.addEventListener('click', () => {
+                    // Kontrollera om användaren är inloggad; om inte, redirect till login
+                    const _loggedInEmail = localStorage.getItem('loggedInUserEmail')
+                    if (!_loggedInEmail) {
+                        window.location.href = '/pages/login.html'
+                        return
+                    }
+
                     reserveBook({
                         id: bookId,
                         title: book.volumeInfo.title,
