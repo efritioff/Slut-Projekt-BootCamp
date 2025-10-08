@@ -24,25 +24,31 @@
    background-color: #fff;
  }
 
-.slide2main {
-   margin-top: -60px;
-   height: 40px;
-   position: static;
-   top: 0;
-   left: 0;
-   transition: margin-top 0.3s;
-   background-color: #333; 
-   color: white;
-   padding: 5px;
-   width: 100%;
-   text-align: center;
+.slide2main, .slide2search  {
+   position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+  background: #333;
+  color: #fff;
+  width: 100%; 
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+  text-decoration: none;
+  z-index: 9999;
 }
-.slide2main:focus {
-   margin-top: 0px;
+.slide2main:focus, .slide2search:focus  {
+  transform: translateY(0);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
+
 header {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    background-color: #eee;
    width: 100%;
 }
@@ -50,14 +56,17 @@ header {
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 2em;
+   margin: 1em;
+   
 }
-#logoText{
-   font-size: 2em;
+#logoText a{
+   font-size: 1.8em;
+   text-decoration: none;
+   color: #111;
 }
 .logo img{
    width: 100px;
-   padding: 0px 40px;
+   margin: 2em;
  }
 
 #hero {
@@ -99,7 +108,10 @@ header {
    padding: 20px;
  }
  .box img {
-   max-width: 80%;;
+   max-width: 80%;
+   width: 300px;
+   height: 300px;
+   overflow: hidden;
  }
  .boxHeader {
    font-weight: bold;
@@ -254,22 +266,21 @@ CSS för object som skapas i biblotek.JS
 #myLibraryList::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 10px; }
 
 #menu {
-   margin: 3% 3em;
-
+   height: 100%;
+   margin: 2em;
 }
 
 .menuItem {
    display: inline;
-   margin:  2em;
+   margin:  1em;
    cursor: pointer;
 }
 .menuItem a {
    color: #333;
    font-size: 1.5em;
    text-decoration: none;
-   margin: 1em;
    background-color: #fff;
    border-radius: 10px 0px 10px 0px;
    box-shadow: 5px 5px 5px #aaa;
-   padding: 1.1em;
+   padding: 1em;
 }

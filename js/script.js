@@ -215,6 +215,6 @@ function cancelReservation(bookId) {
 renderMyLibrary()
 
 // Anropa GoogleBooksAPI endast om sökfält finns (annars visas bara biblioteket)
-if (searchInput && searchBtn) {
+if (!searchInput && searchBtn) {
     GoogleBooksAPI()
 }
