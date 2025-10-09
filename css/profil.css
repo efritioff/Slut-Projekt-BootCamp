@@ -11,18 +11,18 @@ header {
   width: 100%;
 }
 
- #footer {
-    height: 150px;
-    width: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
+#footer {
+  height: 150px;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
- #copyright {
-   color: #fff;
- }
+#copyright {
+  color: #fff;
+}
 
 /* Logo + Header content */
 #logoHolder {
@@ -35,7 +35,8 @@ header {
 .logo img {
   width: 100px;
   margin: 2em;
-  max-width: none; /* override global img rule */
+  max-width: none;
+  /* override global img rule */
 }
 
 #logoText {
@@ -82,22 +83,29 @@ header {
 @media (max-width: 800px) {
   #menu ul {
     display: flex;
-    flex-wrap: wrap;     /* radbryt knapparna */
-    gap: 12px;           /* avstånd mellan knapparna */
+    flex-wrap: wrap;
+    /* radbryt knapparna */
+    gap: 12px;
+    /* avstånd mellan knapparna */
     padding: 0;
     margin: 0;
   }
 
   .menuItem {
-    display: block;      /* inte inline i mobil */
-    margin: 0;           /* vi använder gap i stället */
+    display: block;
+    /* inte inline i mobil */
+    margin: 0;
+    /* vi använder gap istället */
   }
 
   .menuItem a {
     display: inline-block;
-    font-size: 1.05em;   /* lite mindre */
-    padding: .6em .9em;  /* mindre vertikal padding */
-    line-height: 1.2;    /* undvik överlapp */
+    font-size: 1.05em;
+    /* lite mindre */
+    padding: .6em .9em;
+    /* mindre vertikal padding */
+    line-height: 1.2;
+    /* undvik överlapp */
     box-shadow: 3px 3px 6px #bbb;
   }
 }
@@ -108,6 +116,7 @@ header {
     flex-direction: column;
     align-items: stretch;
   }
+
   .menuItem a {
     display: block;
     width: 100%;
@@ -121,7 +130,9 @@ img {
   height: auto;
 }
 
-#logo { max-width: 2rem; }
+#logo {
+  max-width: 2rem;
+}
 
 #chip {
   position: relative;
@@ -131,15 +142,22 @@ img {
   max-width: 3rem;
 }
 
-/* Nav links (if used elsewhere) */
 .nav__links {
   list-style: none;
   display: flex;
 }
 
-.nav__links li { padding: 0 12px; }
-.nav__links li a { transition: color 0.3s ease; }
-.nav__links li a:hover { color: #a90028; }
+.nav__links li {
+  padding: 0 12px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease;
+}
+
+.nav__links li a:hover {
+  color: #a90028;
+}
 
 .cta {
   padding: 6px 16px;
@@ -149,56 +167,9 @@ img {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.cta:hover { background-color: #7d001d; }
 
-/* Mobile Nav overlay */
-.menu { display: none; }
-
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background-color: #24252a;
-  overflow-x: hidden;
-  transition: width 0.5s ease;
-}
-.overlay--active { width: 100%; }
-
-.overlay__content {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.overlay a {
-  padding: 10px;
-  font-size: 36px;
-  display: block;
-  transition: color 0.3s ease;
-}
-.overlay a:hover,
-.overlay a:focus { color: #7d001d; }
-
-.overlay .close {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  color: #edf0f1;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay a { font-size: 20px; }
-  .overlay .close { font-size: 40px; top: 15px; right: 35px; }
-}
-
-@media only screen and (max-width: 800px) {
-  .nav__links, .cta { display: none; }
-  .menu { display: initial; }
+.cta:hover {
+  background-color: #7d001d;
 }
 
 /* Center wrapper on login/profile pages */
@@ -216,16 +187,22 @@ img {
   padding: 40px;
 }
 
-h1 { text-align: center; margin-bottom: 20px; }
-
-p { text-align: center; margin-top: 10px; }
-
-.display-text {
-    color: black;
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-#text-display{
-    padding-bottom: 1rem;
+p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.display-text {
+  color: black;
+}
+
+#text-display {
+  padding-bottom: 1rem;
 }
 
 a {
@@ -244,17 +221,18 @@ a {
 }
 
 #profil-text {
-    padding-inline: 3rem;
-    font-size: 3rem;
+  padding-inline: 3rem;
+  font-size: 3rem;
 }
 
 #biblotek-text {
-    padding-inline: 3rem;
-    font-size: 3rem;
+  padding-inline: 3rem;
+  font-size: 3rem;
 }
 
 #biblotekskort .biblotekskort {
-  margin: 16px auto; /* centrerar block med känd bredd */
+  margin: 16px auto;
+  /* centrerar block med känd bredd */
 }
 
 /* Library card */
@@ -263,7 +241,7 @@ a {
   aspect-ratio: 85.6 / 53.98;
   padding: 14px;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
   color: #fff;
   font: 500 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, Inter, sans-serif;
   background: linear-gradient(248.4deg, #ff5959 0%, #930000 100%);
@@ -307,25 +285,47 @@ a {
   font-size: .78rem;
 }
 
-#biblotekskort .owner .label { opacity: .9; font-size: .7rem; }
-#biblotekskort .owner .name  { font-weight: 600; }
+#biblotekskort .owner .label {
+  opacity: .9;
+  font-size: .7rem;
+}
+
+#biblotekskort .owner .name {
+  font-weight: 600;
+}
 
 @media (max-width: 420px) {
-  #biblotekskort .biblotekskort { padding: 10px; }
-  #biblotekskort .chip { width: 36px; height: 28px; }
-  #biblotekskort .card-number { font-size: .95rem; }
+  #biblotekskort .biblotekskort {
+    padding: 10px;
+  }
+
+  #biblotekskort .chip {
+    width: 36px;
+    height: 28px;
+  }
+
+  #biblotekskort .card-number {
+    font-size: .95rem;
+  }
 }
 
-.book-btn, .cancel-btn {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
+.book-btn,
+.cancel-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.cancel-btn { background: #a90028; color: #fff; }
-.cancel-btn:hover { background: #7d001d }
+.cancel-btn {
+  background: #a90028;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background: #7d001d
+}
 
 /* Book cards */
 .bookHolder {
@@ -343,7 +343,10 @@ a {
 }
 
 
-.bookImg { margin: 10px; max-height: 150px; }
+.bookImg {
+  margin: 10px;
+  max-height: 150px;
+}
 
 .bookTitle {
   font-weight: bold;
