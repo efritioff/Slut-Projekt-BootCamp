@@ -2,7 +2,7 @@
  * @Author: MoS 
  * @Date: 2025-10-03 11:06:57 
  * @Last Modified by: elias.fritioff
- * @Last Modified time: 2025-10-09 09:54:21
+ * @Last Modified time: 2025-10-09 10:36:23
  */
 
 console.log("Project Elmo\n============")
@@ -87,7 +87,7 @@ async function GoogleBooksAPI () {
                     // Kontrollera om användaren är inloggad; om inte, redirect till login
                     const _loggedInEmail = localStorage.getItem('loggedInUserEmail')
                     if (!_loggedInEmail) {
-                        window.location.href = '/pages/login.html'
+                        window.location.href = '../pages/login.html'
                         return
                     }
 
@@ -140,6 +140,7 @@ function isBookReserved(bookId) {
     return getReservations().some(r => r.id === bookId)
 }
 
+// Boken blir reserverad prick "7" dagar (går att ändra)
 function reserveBook(book) {
     const reservations = getReservations()
     const expires = Date.now() + 7 * 24 * 60 * 60 * 1000 // 7 days
@@ -183,7 +184,7 @@ function cancelReservation(bookId) {
     const reservations = getReservations()
     const filtered = reservations.filter(r => r.id !== bookId)
     localStorage.setItem('reservations', JSON.stringify(filtered))
-    // enable reserve button if present in search results
+    // reserverings knapp visas när bok resultaten visas
     const reserveBtn = document.querySelector(`button.book-btn[data-book-id="${bookId}"]`)
     if (reserveBtn) {
         reserveBtn.disabled = false
@@ -192,7 +193,7 @@ function cancelReservation(bookId) {
     renderMyLibrary()
 }
 
-// Initial render of library
+// render library
 renderMyLibrary()
 
 // Anropa GoogleBooksAPI endast om sökfält finns (annars visas bara biblioteket)
