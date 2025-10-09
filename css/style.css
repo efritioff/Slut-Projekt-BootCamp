@@ -47,8 +47,9 @@
 
 header {
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
+   flex-wrap: wrap;
    background-color: #eee;
    width: 100%;
 }
@@ -65,23 +66,26 @@ header {
    color: #111;
 }
 .logo img{
-   width: 100px;
-   margin: 2em;
+   width: 5em;
+   margin: 2em 1em 0em;
  }
 
 #hero {
    background-image: url(../img/hero-banner.jpg);
-   background-repeat:no-repeat;
-   background-position:no-repeat;
-   background-size: 100% 500px;
-   overflow: hidden;
-   height: 550px;
+   background-repeat: no-repeat;
+   background-position: right 60%; 
+   background-attachment: fixed;
+   background-size: 100% ; 
+   height: 22em;
    width: 100%;
+   overflow: hidden;
+   position: relative;
+
 }
 #startRubrik {
-   margin: 300px 5%;
+   margin: 5em 2em;
    font-size: 1.5em;
-   position: absolute;
+   position: relative;
    width: 250px;
    word-wrap: break-word;
 }
@@ -99,7 +103,7 @@ header {
  }
 
  .box {
-   max-width: 40%;
+   max-width: 30%;
    border: 1px solid #999;
    display: flex;
    justify-content: center;
@@ -109,8 +113,8 @@ header {
  }
  .box img {
    max-width: 80%;
-   width: 300px;
-   height: 300px;
+   width: 18em;
+   height: 15em;
    overflow: hidden;
  }
  .boxHeader {
@@ -138,7 +142,7 @@ header {
 
  /* From biblo.css merge 2025-10-07 14:12 */
 #searchSection{
-   margin: 30px 0 0;
+   margin: 2em 0 0;
 }
 
 #searchBardDiv {
@@ -148,13 +152,13 @@ header {
 }
 
 #search {
-    height: 40px;
-    width: 250px;
+    height: 2.5em;
+    width: 12em;
     border: 1px solid #999;
     border-radius: 10px;
-    font-size: 1.1em;
+    font-size: 1em;
     padding: 0.7em;
-    margin: 0.5em;
+    margin: 0.2em;
     box-shadow: 3px 3px 5px #999;
     color: #111;
     transition: 0.4s;
@@ -164,9 +168,9 @@ header {
 }
 
 #startTheSearch {
-    height: 50px;
-    width: 100px;
-    font-size: 1.8em;
+    height: 3em;
+    width: 3em;
+    font-size: 1.3em;
     text-align: center;
     border-radius: 10px 0px 10px 0px;
     box-shadow: 3px 3px 5px #eee;
@@ -215,26 +219,28 @@ CSS för object som skapas i biblotek.JS
 .book-btn:disabled { background: #b3b3b3; cursor: default; }
 .cancel-btn { background: #a90028; color: #fff; }
 .cancel-btn:hover { background: #7d001d }
- .bookImg {
+ 
+.bookImg {
     margin: 10px;
     max-height: 150px;
+    padding: 10px;
  }
  .bookTitle {
-    font-weight: 1.1em;
-    font-weight: bold;
+    font-weight: 1.3em;
+    font-weight: normal;
     margin: 0px 10px 5px;
     width: 90%;
  }
  .bookDesc{
-    font-size: 0.6em;
+    font-size: 0.8em;
     text-overflow: ellipsis;
     overflow: hidden;
     width: 90%;
     height: 100px;
  }
  .bookPublish {
-    font-size: 0.6em;
-    font-weight: bold;
+    font-size: 0.7em;
+    font-weight: normal;
     color: #999;width: 90%;
     margin: 0px;
  }
@@ -266,21 +272,21 @@ CSS för object som skapas i biblotek.JS
 #myLibraryList::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 10px; }
 
 #menu {
-   height: 100%;
-   margin: 2em;
+   height: 50%;
+   margin: 1em;
 }
 
 .menuItem {
    display: inline;
-   margin:  1em;
+   margin:  0em 0.5em ;
    cursor: pointer;
 }
 .menuItem a {
    color: #333;
-   font-size: 1.5em;
+   font-size: 1.1em;
    text-decoration: none;
    background-color: #fff;
    border-radius: 10px 0px 10px 0px;
    box-shadow: 5px 5px 5px #aaa;
-   padding: 1em;
+   padding: 0.7em;
 }

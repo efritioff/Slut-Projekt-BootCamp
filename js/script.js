@@ -10,8 +10,8 @@ Pasted från biblo.js 2025-10-07 14:06 */
 
 console.log("Project Elmo\n============")
 console.log("script.js loaded");
-/* 
-const apikey = "AIzaSyDBIO4OfNn2JsHWIklCuiLqCHVLre-jOck" */
+
+const apikey = "AIzaSyDBIO4OfNn2JsHWIklCuiLqCHVLre-jOck"
 
 const booksResults = document.getElementById("booksResults")
 const searchInput = document.getElementById("search")
@@ -40,29 +40,43 @@ menuClose.addEventListener("click", () => {
 
 // Startar sökning (endast om sök-element finns på sidan)
 if (searchInput && searchBtn && booksResults && searchResult) {
-    //validera: om tom? håll det tomt
-    if (searchInput.value.trim() === "") {
-        searchInput.value = ""
-    }
 
-    // Startar sökning
-    searchBtn.addEventListener("click", async() => {
-        searchInput.value = searchInput.value
-        console.log("Klick")
-
-        //Tömmer gamla resultat av böcker
-        booksResults.innerHTML = ""
-
-        // Kör API functionen vid klick
-        await GoogleBooksAPI()
-    })
+//validera: om tom? håll det tomt
+if (searchInput.value.trim() === "") {
+    searchInput.value = ""
 }
 
+// Startar sökning
+searchBtn.addEventListener("click", async() => {
+    searchInput.value = searchInput.value
+    console.log("Sök klickad")
+
+    //Tömmer gamla resultat av böcker
+    booksResults.innerHTML = ""
+
+    // Kör API functionen vid klick
+    await GoogleBooksAPI()
+    })
+    // Tryck på Enter i input-fältet
+    searchInput.addEventListener("keydown", async (enterKey) => {
+        if (enterKey.key === "Enter") {
+            enterKey.preventDefault() 
+            console.log("Enter tryckt")
+            
+            booksResults.innerHTML = ""
+            
+            await GoogleBooksAPI()
+        }
+    })
+}
+    
 async function GoogleBooksAPI () {
     const query2google = searchInput.value.trim()
-    const getGoogleBooksAPI = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(query2google)}&maxResults=8&startIndex=30`)
+
+    const getGoogleBooksAPI = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(query2google)}&maxResults=8&key=${apikey}`)
     const GoogleBooksData = await getGoogleBooksAPI.json()
- 
+    
+    //Gammalt är kvar för arkiv...
     if(searchResult === ""){
     //Tömmer gamla resultat
     } 
