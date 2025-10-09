@@ -119,12 +119,13 @@ header {
  }
  .boxHeader {
    font-weight: bold;
-   font-size: 0.8em;
+   font-size: 1em;
    margin: 15px 0;
  }
  .boxText {
    margin: 15px 0;
-   font-size: 0.8em;
+   padding: 15px;
+   font-size: 1em;
  }
  #footer {
     height: 150px;
