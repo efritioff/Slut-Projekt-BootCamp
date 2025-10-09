@@ -5,44 +5,44 @@
  * @Last Modified time: 2025-10-03 09:09:31
  */
 
- /*Main font provided by the love of Googel Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* * {
+   border: 1px solid red;
+} */
 
- * {
-    /* border: 1px solid red; */
- }
-
- body {
+body {
    font-family: "Montserrat", sans-serif;
    font-optical-sizing: auto;
    font-style: normal;
-   
+
    display: flex;
    justify-content: start;
    align-items: center;
    flex-direction: column;
    background-color: #fff;
- }
-
-.slide2main, .slide2search  {
-   position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(-150%);
-  transition: transform 0.2s ease;
-  background: #333;
-  color: #fff;
-  width: 100%; 
-  text-align: center;
-  padding: 10px;
-  font-size: 1.2em;
-  text-decoration: none;
-  z-index: 9999;
 }
-.slide2main:focus, .slide2search:focus  {
-  transform: translateY(0);
-  outline: 2px solid #fff;
-  outline-offset: 2px;
+
+.slide2main,
+.slide2search {
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform: translateY(-150%);
+   transition: transform 0.2s ease;
+   background: #333;
+   color: #fff;
+   width: 100%;
+   text-align: center;
+   padding: 10px;
+   font-size: 1.2em;
+   text-decoration: none;
+   z-index: 9999;
+}
+
+.slide2main:focus,
+.slide2search:focus {
+   transform: translateY(0);
+   outline: 2px solid #fff;
+   outline-offset: 2px;
 }
 
 header {
@@ -53,14 +53,16 @@ header {
    background-color: #eee;
    width: 100%;
 }
+
 #logoHolder {
    display: flex;
    justify-content: center;
    align-items: center;
    margin: 1em;
-   
+
 }
-#logoText a{
+
+#logoText a {
    font-size: 1.8em;
    text-decoration: none;
    color: #111;
@@ -82,6 +84,7 @@ header {
    position: relative;
 
 }
+
 #startRubrik {
    margin: 5em 2em;
    font-size: 1.5em;
@@ -89,20 +92,22 @@ header {
    width: 250px;
    word-wrap: break-word;
 }
+
 #motto {
    margin-top: 10px;
    padding-top: 10px;
    border-top: 2px solid red;
 }
- #main {
+
+#main {
    margin: 20px;
    display: flex;
    justify-content: center;
    align-items: center;
    gap: 30px
- }
+}
 
- .box {
+.box {
    max-width: 30%;
    border: 1px solid #999;
    display: flex;
@@ -110,19 +115,22 @@ header {
    align-items: center;
    flex-direction: column;
    padding: 20px;
- }
- .box img {
+}
+
+.box img {
    max-width: 80%;
    width: 18em;
    height: 15em;
    overflow: hidden;
- }
- .boxHeader {
+}
+
+.boxHeader {
    font-weight: bold;
    font-size: 1em;
    margin: 15px 0;
- }
- .boxText {
+}
+
+.boxText {
    margin: 15px 0;
    padding: 15px;
    font-size: 1em;
@@ -138,7 +146,7 @@ header {
 
  #copyright {
    color: #fff;
- }
+}
 
 
  /* From biblo.css merge 2025-10-07 14:12 */
@@ -147,9 +155,9 @@ header {
 }
 
 #searchBardDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 #search {
@@ -164,8 +172,9 @@ header {
     color: #111;
     transition: 0.4s;
 }
+
 #search:hover {
-    transform: scale(1.01);
+   transform: scale(1.01);
 }
 
 #startTheSearch {
@@ -182,13 +191,13 @@ header {
 }
 
 #startTheSearch:hover {
-    transform: scale(1.1);
+   transform: scale(1.1);
 }
 
 #booksResults {
- display: flex;
- justify-content: start;
- flex-wrap: wrap;
+   display: flex;
+   justify-content: start;
+   flex-wrap: wrap;
 }
 
 /* 
@@ -246,31 +255,37 @@ CSS för object som skapas i biblotek.JS
     margin: 0px;
  }
 .searchText {
-    font-size: 0.6em;
-    color: #999;
-    display: flex;
-    justify-content: center;
-    margin: 10px;
+   font-size: 0.6em;
+   color: #999;
+   display: flex;
+   justify-content: center;
+   margin: 10px;
 }
 
 /* Horizontal scroll for reserved books in profile */
 #myLibraryList {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    padding: 16px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+   display: flex;
+   gap: 16px;
+   overflow-x: auto;
+   padding: 16px;
+   scroll-snap-type: x mandatory;
+   -webkit-overflow-scrolling: touch;
 }
 
 #myLibraryList .bookHolder {
-    scroll-snap-align: start;
-    margin: 0;
+   scroll-snap-align: start;
+   margin: 0;
 }
 
 /* Simple scrollbar styling (WebKit) */
-#myLibraryList::-webkit-scrollbar { height: 10px; }
-#myLibraryList::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 10px; }
+#myLibraryList::-webkit-scrollbar {
+   height: 10px;
+}
+
+#myLibraryList::-webkit-scrollbar-thumb {
+   background: rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+}
 
 #menu {
    height: 50%;
@@ -282,6 +297,7 @@ CSS för object som skapas i biblotek.JS
    margin:  0em 0.5em ;
    cursor: pointer;
 }
+
 .menuItem a {
    color: #333;
    font-size: 1.1em;

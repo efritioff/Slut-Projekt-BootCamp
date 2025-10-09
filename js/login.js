@@ -27,4 +27,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-  const registerLink = document.getElementById("registerLink");
+const registerLink = document.getElementById("registerLink");

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="Description"
+      name="Logga in elmo biblotek"
       content="Denna sida är ett skolarbete gjord av Elias och Moises. För kursen BootCamp FOS25"
     />
 
@@ -13,31 +13,29 @@
     <link rel="stylesheet" href="../css/cssreset.css" />
     <link rel="stylesheet" href="../css/login.css" />
 
-    <!-- Google Fonts (samma som i ditt exempel) -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap"
-      rel="stylesheet"
-    />
-
     <title>Project Elmo | By: Elias & Moises - BootCamp FOS 2025</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
   </head>
 
-<body>
-  <div class="container">
-    <div class="form-box" id="formBox">
-      <h1 id="formTitle">Logga in</h1>
+  <body>
+    <div class="container">
+      <div class="form-box" id="formBox">
+        <h1 id="formTitle">Logga in</h1>
 
-      <!-- Enkel sida med EN hårdkodad inloggning -->
-      <form id="loginForm">
-        <input id="loginEmail" type="email" placeholder="E-post" required>
-        <input id="loginPassword" type="password" placeholder="Lösenord" required>
-        <button type="submit">Logga in</button>
-      </form>
-      <p style="font-size:0.9rem;color:#666;margin-top:8px">Testinloggning: <strong>admin@gmail.com</strong> / <strong>123456</strong></p>
+        <!--hårdkodad inloggning -->
+        <form id="loginForm">
+          <input id="loginEmail" type="email" placeholder="E-post" required />
+          <input
+            id="loginPassword"
+            type="password"
+            placeholder="Lösenord"
+            required
+          />
+          <button type="submit">Logga in</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <script src="../js/login.js"></script>
-</body>
+    <script src="../js/login.js"></script>
+  </body>
 </html>

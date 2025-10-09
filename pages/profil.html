@@ -1,101 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Låna - Elmos Bibliotek</title>
-    <meta name="description" content="Låna Böcker">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/cssreset.css">
-    <link rel="stylesheet" href="../css/profil.css">
+    <meta name="description" content="Låna Böcker" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/cssreset.css" />
+    <link rel="stylesheet" href="../css/profil.css" />
 
     <script>
       // Redirect till login om inte inloggad
-      const _loggedInEmail = localStorage.getItem('loggedInUserEmail');
+      const _loggedInEmail = localStorage.getItem("loggedInUserEmail");
       if (!_loggedInEmail) {
-        window.location.href = '/pages/login.html';
+        window.location.href = "../pages/login.html";
       }
 
-      const _loggedInName = localStorage.getItem('loggedInUsername') || '';
+      const _loggedInName = localStorage.getItem("loggedInUsername") || "";
 
-      window.addEventListener('DOMContentLoaded', () => {
-        const userEmailEl = document.getElementById('userEmail');
-        const userNameEl = document.getElementById('userName');
-        const ownerNameEls = document.querySelectorAll('.biblotekskort .owner .name');
+      window.addEventListener("DOMContentLoaded", () => {
+        const userEmailEl = document.getElementById("userEmail");
+        const userNameEl = document.getElementById("userName");
+        const ownerNameEls = document.querySelectorAll(
+          ".biblotekskort .owner .name"
+        );
 
-        if (userEmailEl) userEmailEl.textContent = _loggedInEmail || '';
-        if (userNameEl) userNameEl.textContent = _loggedInName || _loggedInEmail || '';
-        if (ownerNameEls.length) ownerNameEls.forEach(el => el.textContent = _loggedInName || '');
+        if (userEmailEl) userEmailEl.textContent = _loggedInEmail || "";
+        if (userNameEl)
+          userNameEl.textContent = _loggedInName || _loggedInEmail || "";
+        if (ownerNameEls.length)
+          ownerNameEls.forEach((el) => (el.textContent = _loggedInName || ""));
       });
     </script>
   </head>
   <body>
-<header>
-  <div id="logoHolder">
-    <a class="logo" href="/">
-      <img src="../img/Elmo-png-1.webp" alt="Elmo project logotype">
-    </a>
-    <div id="logoTextContainer">
-      <h1 id="logoText">Elmo Project</h1>
-      <h2 id="motto">The public library</h2>
-    </div>
-  </div>
-
-  <nav id="menu" aria-label="Huvudmeny">
-    <ul>
-      <li class="menuItem"><a href="/">Start</a></li>
-      <li class="menuItem"><a href="profil.html">Min sida</a></li>
-      <li class="menuItem"><a href="../pages/omoss.html">Om oss</a></li>
-    </ul>
-  </nav>
-</header>
-
-    <div class="overlay">
-      <a class="close">&times;</a>
-      <div class="overlay__content">
-        <a href="#">Låna Böcker</a>
-        <a href="#">Favorit Böcker</a>
-        <a href="#">Bok Reviews</a>
+    <header>
+      <div id="logoHolder">
+        <a class="logo" href="/">
+          <img src="../img/Elmo-png-1.webp" alt="Elmo project logotype" />
+        </a>
+        <div id="logoTextContainer">
+          <h1 id="logoText">Elmo Project</h1>
+          <h2 id="motto">The public library</h2>
+        </div>
       </div>
-    </div>
 
+      <nav id="menu" aria-label="Huvudmeny">
+        <ul>
+          <li class="menuItem"><a href="/">Start</a></li>
+          <li class="menuItem"><a href="../pages/profil.html">Min sida</a></li>
+          <li class="menuItem"><a href="../pages/omoss.html">Om oss</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
+      <div class="login-center">
+        <div class="form-box" id="formBox">
+          <p id="profil-text">Profil</p>
 
-<div class="login-center">
-    <div class="form-box" id="formBox">
-      <p id="profil-text">Profil</p>
-      <section id="userInfoSection">
-        <p id="uppgifter-text">Dina uppgifter</p>
-        <div id="userInfo">
-          <p class="display-text"><strong>Namn:</strong> <span id="userName">Per Hall</span></p>
-          <p class="display-text"><strong>E-post:</strong> <span id="userEmail"></span></p>
-          </div>
-      </section>
-      <section id="biblotekskort">
+          <section id="userInfoSection">
+            <p id="uppgifter-text">Dina uppgifter</p>
+            <div id="userInfo">
+              <p class="display-text">
+                <strong>Namn:</strong> <span id="userName">Per Hall</span>
+              </p>
+              <p class="display-text">
+                <strong>E-post:</strong> <span id="userEmail"></span>
+              </p>
+            </div>
+          </section>
+
+          <!-- Bibliotekskort -->
+          <section id="biblotekskort">
             <div class="biblotekskort">
-      <div class="top-row">
-        <div class="card-number">9606 3663 0377 4090</div>
+              <div class="top-row">
+                <div class="card-number">9606 3663 0377 4090</div>
+                <div class="chip">
+                  <img src="../img/chip.png" alt="chip" />
+                </div>
+                <div class="owner">
+                  <div class="label">Ägare</div>
+                  <div class="name">Per Hall</div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-      <div class="chip">
-        <img src="/img/chip.png" alt="chip">
+          <!-- Ditt bibliotek: reserverade böcker -->
+          <section id="myLibrary">
+            <p id="biblotek-text">Ditt bibliotek</p>
+            <div id="myLibraryList"></div>
+          </section>
+        </div>
       </div>
-
-      <div class="owner">
-        <div class="label">Ägare</div>
-        <div class="name">Per Hall</div>
-      </div>
-      </section>
-      
-      <!-- Ditt bibliotek: reserverade böcker (flyttat hit) -->
-      <section id="myLibrary">
-        <p id="biblotek-text">Ditt bibliotek</p>
-        <div id="myLibraryList"></div>
-      </section>
-
-
-  </div>
-</div>
     </main>
+
     <footer id="footer">
       <p id="copyright">Projekt Elmo | copyright 2025</p>
     </footer>
